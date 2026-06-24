@@ -127,9 +127,16 @@ a {
 
 .hero-card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   padding: 26px 20px 22px;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-card > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .eyebrow,
@@ -193,8 +200,9 @@ a {
 h1,
 h2,
 p {
-  word-break: keep-all;
-  overflow-wrap: anywhere;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  line-break: anywhere;
 }
 
 h1 {
@@ -219,6 +227,8 @@ h2 {
 }
 
 .lead {
+  width: 100%;
+  max-width: 31ch;
   margin: 0;
   color: var(--muted);
   font-size: 15px;
@@ -262,6 +272,10 @@ h2 {
   align-items: center;
   margin-top: 16px;
   padding: 18px;
+}
+
+.profile-section > div:last-child {
+  min-width: 0;
 }
 
 .profile-section p:last-child {
