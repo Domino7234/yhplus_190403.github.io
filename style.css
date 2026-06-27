@@ -54,9 +54,17 @@ a {
 }
 
 .brand {
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  width: min(42vw, 148px);
+  min-width: 104px;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
 }
 
 .menu-button {
@@ -237,6 +245,18 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 15px;
+}
+
+.hero-logo {
+  width: min(100%, 320px);
+  margin: 18px auto 0;
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
 }
 
 .hero-actions {
